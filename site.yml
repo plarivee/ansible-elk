@@ -1,0 +1,7 @@
+---
+- hosts: elk
+  remote_user: root
+  roles:
+  - { role: java }
+  - { role: elasticsearch }
+  - { role: kibana }
