@@ -1,0 +1,21 @@
+---
+- name: Install Logstash
+  apt:
+   name: logstash
+   update_cache: yes
+
+- name: Install Input syslog
+  logstash_plugin:
+    state: present
+    name: logstash-input-syslog
+
+- name: Install Output ES
+  logstash_plugin:
+    state: present
+    name: logstash-output-elasticsearch
+
+- name: Starting Logstash
+  service:
+   name: logstash
+   state: started
+    
