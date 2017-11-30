@@ -18,12 +18,12 @@
   copy:
     src: files/syslog_input.conf
     dest: /etc/logstash/conf.d/syslog_input.conf
-	
+
 - name: "copy syslog filter config"
   copy:
     src: files/syslog_input.conf
     dest: /etc/logstash/conf.d/syslog_filter.conf
-	  
+
 - name: "copy es output config"
   copy:
     src: files/es_output.conf
