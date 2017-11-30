@@ -24,6 +24,16 @@
     src: files/syslog_filter.conf
     dest: /etc/logstash/conf.d/syslog_filter.conf
 
+- name: "copy pfsense grok config"
+  copy:
+    src: files/pfsense_grok.conf
+    dest: /etc/logstash/patterns/pfsense_grok.conf
+	
+- name: "copy pfsense filter config"
+  copy:
+    src: files/pfsense_grok_filter.conf
+    dest: /etc/logstash/conf.d/pfsense_grok_filter.conf
+
 - name: "copy es output config"
   copy:
     src: files/es_output.conf
