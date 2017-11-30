@@ -21,7 +21,7 @@
 
 - name: "copy syslog filter config"
   copy:
-    src: files/syslog_input.conf
+    src: files/syslog_filter.conf
     dest: /etc/logstash/conf.d/syslog_filter.conf
 
 - name: "copy es output config"
