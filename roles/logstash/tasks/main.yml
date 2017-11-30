@@ -24,6 +24,9 @@
     src: files/syslog_filter.conf
     dest: /etc/logstash/conf.d/syslog_filter.conf
 
+- name: Create patterns directory
+  file: path=etc/logstash/patterns/ state=directory
+
 - name: "copy pfsense grok config"
   copy:
     src: files/pfsense_grok.conf
